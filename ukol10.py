@@ -12,9 +12,9 @@ def total_points(odvetvi, obrat, zeme, konference = False, newsletter = False):
     point =+ 3
   else:
     point =+ 1
-  if zeme == "Česká republika" or "Slovensko":
+  if zeme in ["Česká republika", "Slovensko"]:
     point =+ 2
-  elif zeme == "Německo" or "Francie":
+  elif zeme in ["Německo" or "Francie"]:
     point =+ 1
   else:
     point = 0
