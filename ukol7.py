@@ -490,12 +490,12 @@ staty = [
      'area': 390757.0}]
 
 svetadil = input("O jaký světadíl se zajímáte: ")
-totalPopulationInSubregion = 0
-novySeznam = {}
+novySlovnik = {}
 for udaj in staty:
   subregion = udaj["subregion"]
   population = udaj["population"]
   region = udaj["region"]
   if svetadil == region:
-    totalPopulationInSubregion =+ population
-    print(f"{subregion}, {totalPopulationInSubregion}")
+    if subregion in novySlovnik:
+      subregion =+ population
+print(novySlovnik)
