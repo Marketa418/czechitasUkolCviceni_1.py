@@ -31,8 +31,6 @@ class Cars:
             #   celkova_cena = pocet_pujcenych_dni * 300
     #      print(f"Cena za půjčení auta je {celkova_cena} Kč za {pocet_pujcenych_dni} dní.")
 
-
-
 peugeot = Cars("4A2 3020", "Peugeot 403 Cabrio", "47534")
 octavia = Cars ("1P3 4747", "Škoda Octavia", "41253")
 
