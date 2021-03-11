@@ -497,5 +497,7 @@ for udaj in staty:
   region = udaj["region"]
   if svetadil == region:
     if subregion in novySlovnik:
-      subregion =+ population
+        novySlovnik[subregion] =+ population
+    else:
+        novySlovnik[subregion] = population
 print(novySlovnik)
