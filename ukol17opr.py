@@ -32,8 +32,8 @@ class Uzivatel:
         self.uzivatelske_jmeno = uzivatelske_jmeno
         self.delka_sledovani = 0
 
-    def pripocti_zhlednuti(self, celkova_delka_serialu, delka):
-        self.delka_sledovani += celkova_delka_serialu + delka
+    def pripocti_zhlednuti(self, celkova_delka_serialu):
+        self.delka_sledovani += celkova_delka_serialu
         return self.delka_sledovani
 
 nepritel_pred_branami = Film("Nepřítel před branami", "válečné/drama", 280)
@@ -45,5 +45,5 @@ print(nepritel_pred_branami.get_Info())
 print(hnizdo.get_Info())
 print(hnizdo.get_celkova_delka())
 print(nepritel_pred_branami.get_celkova_delka())
-print(karel.pripocti_zhlednuti(hnizdo.get_celkova_delka(),0))
-print(karel.pripocti_zhlednuti(nepritel_pred_branami.get_celkova_delka(), 0))
+print(karel.pripocti_zhlednuti(hnizdo.get_celkova_delka()))
+print(karel.pripocti_zhlednuti(nepritel_pred_branami.get_celkova_delka()))
