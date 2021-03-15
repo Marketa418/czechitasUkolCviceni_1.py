@@ -6,17 +6,37 @@ vysledky = [
   {"Jméno": "Rychlonožka", "Český jazyk": 4, "Anglický jazyk": 3, "Matematika": 2, "Chemie": 1, "Biologie": 4},
 ]
 
-def ohodnot_studenta(subject):
-  sum_marks = 0
-  ????
-  return avarage
-  print(sum_marks)
 
-  ohodnot_studenta(vysledky)
-  if avarage <= 1.5:
-    if 3 not in vysledky:
+def ohodnot_studenta(radek):
+
+  average = sum(radek) / 5
+
+  if average <= 1.5:
+
+    if 3 not in radek:
+
       print("Prospěl s vyznamenáním.")
-  elif 5 in vysledky:
+
+    else:
+
+      print("Prospěl")
+
+  elif 5 in radek:
+
     print("Neprospěl.")
+
   else:
-    print ("Prospěl.")
+
+    print("Prospěl.")
+
+  return average
+
+
+
+for radek in vysledky:
+
+  jmeno_studenta = radek.pop("Jméno")
+
+  print(jmeno_studenta, end=": ")
+
+  ohodnot_studenta(radek.values())
