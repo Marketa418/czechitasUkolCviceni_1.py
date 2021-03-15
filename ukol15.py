@@ -2,17 +2,17 @@ from datetime import datetime, timedelta
 
 datum = input("Uveďte datum, kdy chcete jít do kina: ")
 pocet_osob = int(input("Pro kolik osob chcete lístky: "))
-datum_novy = datum.strftime("%Y. %m. %d.")
+datum_novy = datetime.strptime(datum, "%d. %m. %Y.")
 
-start_hlavni_sezona = datetime(2021, 7, 1)
+start_hlavni_sezona = datetime(1, 7, 2021)
 konec_hlavni_seozna = datetime(2021, 8, 10)
 start_vedlejsi_sezona = datetime(2021, 8, 11)
 konec_vedlejsi_seozna = datetime(2021, 8, 31)
 
-if datum_novy == start_hlavni_sezona and konec_hlavni_seozna:
+if start_hlavni_sezona <= datum_novy <= konec_hlavni_seozna:
   cena_za_listky = pocet_osob * 250
   print(f"Cena za vstupenky je {cena_za_listky}.")
-elif datum_novy == start_vedlejsi_sezona and konec_vedlejsi_seozna:
+elif start_vedlejsi_sezona <= datum_novy <= konec_vedlejsi_seozna:
   cena_za_listky = pocet_osob * 180
   print(f"Cena za vstupenky je {cena_za_listky}.")
 else:
