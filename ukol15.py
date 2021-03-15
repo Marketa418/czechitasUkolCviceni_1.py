@@ -4,7 +4,7 @@ datum = input("Uveďte datum, kdy chcete jít do kina: ")
 pocet_osob = int(input("Pro kolik osob chcete lístky: "))
 datum_novy = datetime.strptime(datum, "%d. %m. %Y.")
 
-start_hlavni_sezona = datetime(1, 7, 2021)
+start_hlavni_sezona = datetime(2021, 7, 1)
 konec_hlavni_seozna = datetime(2021, 8, 10)
 start_vedlejsi_sezona = datetime(2021, 8, 11)
 konec_vedlejsi_seozna = datetime(2021, 8, 31)
